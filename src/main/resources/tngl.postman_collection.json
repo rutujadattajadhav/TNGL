@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "09b79f9b-26cb-4c34-a87c-52263c26cc41",
+		"name": "tngl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "1574710"
+	},
+	"item": [
+		{
+			"name": "addaCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"Rudra\",\r\n\"address\":\"pune\",\r\n\"customerNumber\":\"8856085432\",\r\n\"meterSerilNumber\":\"9\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/addaCustomer"
+			},
+			"response": []
+		},
+		{
+			"name": "updateCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"mahaRudra\",\r\n\"address\":\"pune\",\r\n\"customerNumber\":\"8856085432\",\r\n\"meterSerilNumber\":\"9\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/updateCustomer"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCustomer",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "customerNumber",
+						"value": "654321",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/deleteCustomer"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAllCoustomers By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n   \"9529725454\",\"8856085432\" , \"aaa\"\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/deleteCustomersById"
+			},
+			"response": []
+		},
+		{
+			"name": "findAllCustomer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/findAllCustomer"
+			},
+			"response": []
+		}
+	]
+}
